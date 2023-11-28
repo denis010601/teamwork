@@ -10,11 +10,11 @@ class Products(models.Model):
     brutto = models.CharField(max_length=100, verbose_name="Масса брутто", blank=True, null=True)
     delivery = models.CharField(max_length=100, verbose_name="Время доставки", blank=True, null=True)
     minimal_order = models.CharField(max_length=100, verbose_name="Минимальная партия", blank=True, null=True)
-    barcode = models.PositiveIntegerField(max_length=100, verbose_name="Код продукта")
-    pcs_truck = models.PositiveIntegerField(max_length=100, verbose_name="Штук в фуре")
-    pallets_truck = models.PositiveIntegerField(max_length=100, verbose_name="Паллет в фуре")
-    cases_truck = models.PositiveIntegerField(max_length=100, verbose_name="Упаковок в фуре")
-    gross_weight = models.FloatField(max_length=100, verbose_name="Общая масса, кг")
+    barcode = models.PositiveIntegerField(verbose_name="Код продукта")
+    pcs_truck = models.PositiveIntegerField(verbose_name="Штук в фуре")
+    pallets_truck = models.PositiveIntegerField(verbose_name="Паллет в фуре")
+    cases_truck = models.PositiveIntegerField( verbose_name="Упаковок в фуре")
+    gross_weight = models.FloatField(verbose_name="Общая масса, кг")
     description = models.TextField(verbose_name="Описание", blank=True)
 
     def __str__(self):
