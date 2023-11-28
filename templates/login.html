@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div>Вход для суперпользователя:</div>
+<div>login:super</div>
+<div>password:user</div>
+<p></p>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.errors }}
+    <div class="">
+        {{ form.username.label_tag }}
+        {{ form.username }}
+    </div>
+
+    <div class="">
+        {{ form.password.label_tag }}
+        {{ form.password }}
+    </div>
+
+    <div class="">
+        <button type="submit">Войти</button>
+    </div>
+</form>
+{% endblock content %}
