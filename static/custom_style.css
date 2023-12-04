@@ -1,0 +1,66 @@
+.custom_button {
+    min-width: initial;
+    min-height: initial;
+}
+.custom_button_exclusive {
+    min-width: 30px;
+    min-height: 30px;
+}
+body {
+    background: linear-gradient(217.36deg, #242627 1.99%, #161718 101.43%);
+
+}
+.custom_h1 {
+    margin: 2% auto;
+    color:azure;
+    font-size: 54px;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf)
+}
+.custom_h4 {
+    color:azure;
+    font-size: 24px;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf)
+}
+.custom_a {
+    font-size: 16px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
+}
+.custom_p {
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
+}
+[aria-current='page'] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: grey;
+}
+.custom_card-body {
+    background: linear-gradient(217.36deg, #242627 1.99%, #161718 101.43%);
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+button {
+    margin: 3% auto;
+}
+.custom_div-1 {
+    background: linear-gradient(261.91deg, #04C1C1 -1.66%, #9BE3E3 -1.65%, #04C1C1 64.99%);
+
+
+}
+.custom_div-2 {
+    background: linear-gradient(19.48deg, rgba(226, 243, 253, 0.24) -10.08%, rgba(147, 225, 237, 0.24) 16.82%, rgba(2, 185, 243, 0.24) 47.06%, rgba(2, 138, 190, 0.24) 78.53%, rgba(0, 92, 157, 0.24) 108.39%);
+
+
+}

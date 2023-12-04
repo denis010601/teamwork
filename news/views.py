@@ -6,6 +6,7 @@ from news.models import News
 
 class NewsView(CreateView):
     model = News
+    fields = '__all__'
     template_name = 'news.html'
 
     def get_queryset(self):
