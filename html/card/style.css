@@ -21,6 +21,7 @@
   font-size: 17px;
   line-height: 150%;
   color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .card__image {
   display: block;
@@ -34,4 +35,13 @@
   justify-content: center;
   font-weight: 700;
 
+}
+.card__add-basket {
+  stroke-width: 1px;
+  width: 31px;
+  height: 31px;
+  padding-right: 40px;
+  border: 1px;
+  font-style: normal;
+  font-size: 18px;
 }
