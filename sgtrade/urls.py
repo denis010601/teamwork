@@ -18,11 +18,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from news.views import NewsView
+from news.views import NewsView, NewsDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', NewsView.as_view(), name='news'),
+    path('news/<int:pk>', NewsDetailView.as_view(), name='news_detail'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
