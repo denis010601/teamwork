@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for product in products_list %}
+        <div class=" d-flex col-12 md-6 col-xl-4 col-xxl-3 mb-2 mb-md-3">
+            <div class="card">
+                <div class="card-body align-items-center justify-content-center">
+                    <img class="card-img-top w-50" src="{{ product.image.url }}" alt="">
+                    <a href="{# url 'product_detail' product.pk #}" class="btn btn-primary">{{ product.title|truncatechars:50 }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div><a href="{# url '' #}" class="btn btn-primary">load more</a></div>
+
+
+{% endblock content %}
