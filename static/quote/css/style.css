@@ -1,0 +1,25 @@
+body {
+    width: Hug (477.42px);
+    height: Hug (744.6px);
+    top: 207.5px;
+    left: -701px;
+    padding: 44px, 45px, 44px, 45px;
+    gap: 40px;
+    background: #111010;
+}
+.layout {
+    width: 387.42px;
+    height: 65.6px;
+}
+.typography {
+    font-family: Playfair Display;
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.colors {
+    background: linear-gradient(0deg, #04C1C1, #04C1C1);
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
