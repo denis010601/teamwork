@@ -17,11 +17,6 @@ class NewsDetailView(DetailView):
     fields = '__all__'
     template_name = 'news_detail.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['article_books'] = News.objects.filter(news=self.object)
-        return context
-
     def get_queryset(self):
         return News.objects.all()
 
