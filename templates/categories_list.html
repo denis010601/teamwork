@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for products in category_list %}
+        <div class=" d-flex col-12 md-6 col-xl-4 col-xxl-3 mb-2 mb-md-3">
+            <div class="card">
+                <div class="card-body align-items-center justify-content-center">
+                    <h5 class="card-title">{{ products.title|truncatechars:50 }}</h5>
+                    <img class="card-img-top w-50" src="{{ product.image.url }}" alt="">
+                    <p class="card-text" style="height:150px;">{{ products.text|truncatechars:150 }}</p>
+                    <a href="{% url 'category_detail' category.pk %}" class="btn btn-primary">Browse</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div><a href="{# url '' #}">All contacts</a></div>
+<div><a href="{# url '' #}">Send request</a></div>
+
+{% endblock content %}

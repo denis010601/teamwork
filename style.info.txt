@@ -1,0 +1,11 @@
+background: radial-gradient(#2B2B2B 100%, #000000 100%);
+header-text-font-family:Radio Canada (color: green #63DEA6);
+h1-font-family: Playfair Display (color: electric #04C1C1; white #FFFFFF);
+h1-desc-font-family: Radio Canada (color: grey #C8C8C8);
+button-text-font-family: Radio Canada (electric-gradient, color: #04C1C1 100%, #9BE3E3 100%, #04C1C1 100%);
+h2-font-family: Playfair Display (color: white);
+h2-desc-font-family: Radio Canada (color: white);
+product-button-text-family: Radio Canada (color: white);
+h3-font-family: Playfair Display (color: white);
+feedback-font-family: Gotham Pro (color: white);
+footer-contact-text-family: Gotham Pro (color: sky #E2F3FD);
