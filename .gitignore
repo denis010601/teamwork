@@ -1,2 +1,6 @@
 .vscode/
 .idea/
+*/**/__pycashe__/*
+*/**/**/__pycashe__/*
+*/*/*/__pycashe__/*
+*/*/**/__pycashe__/*
