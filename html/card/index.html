@@ -5,17 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <div class="card">
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-  <div class="card__top">
-    <a href="#" class="card__image">
-      <img src="./image/image.png" alt="Coca Cola 0,33 ml can"/> </a>
-
-    <a href="#" class="card__title"></a>
-  </div>
-</div>
-</head>
 <body>
     <h1> карточка товара </h1>
+        <div class="card">
+          <div class="card__top">
+            <a href="#" class="card__image">
+              <!-- вместо ./../static/img/image.png путь к статик в проекте  -->
+              <img src="../../static/img/image.png" alt="Coca Cola 0,33 ml can"> 
+            </a>
+          </div>
+          <div class="card__bottom">
+            <img class="card__add-basket" src="">
+            <h3 class="card__title">Coca Cola 0,33 ml can</h3>
+          </div>
+</div>
 </body>
 </html>
