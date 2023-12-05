@@ -10,7 +10,7 @@ class News(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Автор')
 
     def get_absolute_url(self):
-        return reverse('list', kwargs={'pk': self.pk})
+        return reverse('news', kwargs={'pk': self.pk})
 
     def __str__(self):
         return f'{self.title}'
