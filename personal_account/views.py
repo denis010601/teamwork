@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 class ProfileView(TemplateView):
-    template_name = 'personal_account/profile.html'
+    template_name = 'profile/profile.html'
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
