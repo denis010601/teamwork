@@ -18,14 +18,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from news.views import NewsView, NewsDetailView
+from news.views import NewsView, NewsDetailView, NewsListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', NewsView.as_view(), name='news'),
+    path('news_list/', NewsListView.as_view(), name='news_list'),
     path('news/<int:pk>', NewsDetailView.as_view(), name='news_detail'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-

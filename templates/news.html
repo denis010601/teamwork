@@ -3,18 +3,17 @@
 {% load static %}
 <div class="container vh-100">
     <h1 class="custom_h1 p-2 h-55">News</h1>
+    {% for news in news_list %}
         <div class="row row-cols-1 row-cols-md-4 g-4 h-55">
-
             <div class="col">
-                <a href="#">
+                <a href="{% url 'news_detail' news.id %}">
                     <div class="card h-100">
                         <img src="{% static 'img/jagermeisterADOBE 1.png' %}" class="card-img-top" alt="jagermeister">
                         <div class="card-body custom_card-body">
                             <h4 class="card-title custom_h4">We opened a new section - Alcohol!</h4>
                             <div class="card-text d-grid gap-2 d-md-block">
-                                <object class="p-2" type="image/svg+xml" data="picture.svg">
-
-                                </object>
+<!--                                <object class="p-2" type="image/svg+xml" data="picture.svg">-->
+<!--                                </object>-->
                                 <small class="text-body-secondary p-2 ms-auto"><a class="custom_a" aria-current='page'>06.06.2023</a></small><button type="button" class="btn btn-success btn-sm p-2 ms-auto custom_button"></button>
                             </div>
                         </div>
@@ -25,13 +24,13 @@
 
 
         </div>
-    </div>
+    {% endfor %}
+</div>
       <div class="container vh-100">
         <div class="text-center h-75">
             <button type="button" class="btn btn-outline-success custom_button "><a class="align-items-center">Load More</a></button>
         </div>
       </div>
-    </div>
     <div class="container vh-100">
         <div class="h-75">
             <div class="">
