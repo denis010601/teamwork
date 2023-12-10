@@ -25,7 +25,7 @@ from news.views import NewsView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', NewsView.as_view(), name='news'),
-    # path('brands/', include('import_export.urls')),
+    path('brands/', include('import_export.urls')),
     path('products/', include('products.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
