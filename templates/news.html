@@ -3,22 +3,21 @@
 {% load static %}
 <div class="container">
     <h1 class="custom_h1 p-2">News</h1>
-
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for news in newsv %}
-               <a class="col-md-3" href="{% url 'news_detail' news.id %}">
-            <div class="">
-               <div class="card mb-4 h-100 border-dark" style="max-width: 18rem;">
+            <a class="col-md-3" href="{% url 'news_detail' news.id %}">
+            <div class="col-md-12">
+               <div class="card mb-4 h-100 border-dark" style="max-width: 22rem;">
                    <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="350" width="350" class="card-img-top custom_img" alt="foto">
                    <div class="card-body custom_card-body">
                         <h4 class="card-title custom_h4">{{ news.title }}</h4>
                         <p class="card-text custom_p">{{ news.text }}</p>
                    </div>
-                </div>
+               </div>
             </div>
             {% endfor %}
+            </a>
         </div>
-    </a>
 </div>
 <div class="container">
     <div class="text-center">

@@ -22,20 +22,30 @@ body {
     font-size: 24px;
     font-family: 'Playfair Display';
     font-style: italic;
-    src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf)
+    src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf);
 }
 .custom_a {
     font-size: 16px;
     font-family: 'Gotham Pro';
     font-style: normal;
-    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);  
 }
 .custom_p {
     color:aliceblue;
     font-size: 20px;
     font-family: 'Gotham Pro';
     font-style: normal;
-    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);  
+}
+.custom_p1 {
+    color:aliceblue;
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);  
+    text-align: center;
+    justify-content: center;
+
 }
 [aria-current='page'] {
     pointer-events: none;
