@@ -32,6 +32,7 @@ body {
     src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
 }
 .custom_p {
+    color:azure;
     font-size: 20px;
     font-family: 'Gotham Pro';
     font-style: normal;
