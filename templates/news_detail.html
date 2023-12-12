@@ -5,6 +5,7 @@
     <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="500" width="100%" class="card-img border-dark" alt="...">
         <div class="card-img-overlay">
             <h4 class="custom_h4">{{ news.title }}</h4>
+            <p class="card-text"><small>{{ news.pub_date|date:"d-m-Y" }}</small></p>
         </div>
     </div>
     <div class="align-items-center justify-content-center">
