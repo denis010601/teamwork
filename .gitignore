@@ -1,16 +1,10 @@
 .vscode/
 .idea/
-<<<<<<< HEAD
-*/**/__pycashe__/*
-*/**/**/__pycashe__/*
-*/*/*/__pycashe__/*
-*/*/**/__pycashe__/*
-=======
+__pycache__/
 */**/__pycache__/*
 */**/**/__pycache__/*
-<<<<<<< HEAD
 */*/*/__pycache__/*
 */*/**/__pycache__/*
->>>>>>> develop
-=======
->>>>>>> develop
+*/**/__pycache__/*
+*/**/**/__pycache__/*
+

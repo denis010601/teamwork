@@ -1,11 +1,16 @@
-{% extends 'base.html' %}
-{% block content %}
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
  <h1>Профиль пользователя</h1>
     <p>Добро пожаловать {{ user.username }}</p>
 {% if user.profile_pic %}
-    <img src="{{ user.profile_pic.url }}" height=200 width=200>
+    <img class="rounded float-start" src="{{ user.profile_pic.url }}" height=200 width=200>
 {% else %}
  <p> Нет изображения </p>
 {% endif %}
@@ -13,6 +18,8 @@
     <p>Фамилия {{ user.last_name }}</p>
     <p>Дата рождения: {{ user.birth_date }} </p>
     <a href="{{ user.mail }}"> Ваш email</a> <br>
+    <a href="{% url 'logout' %}" class="h-75 btn btn-primary me-md-2" type="button">Выход</a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
 
-
-{% endblock content %}
