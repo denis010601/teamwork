@@ -25,11 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', include('products.urls')),
     path('products/', include('products.urls')),
-<<<<<<< HEAD
-    path(' ', include('personal_account.urls'))
-=======
+    path('accounts/profile/', include('personal_account.urls')),
     path('news/', NewsView.as_view(), name='news'),
->>>>>>> develop
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
