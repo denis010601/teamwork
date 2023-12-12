@@ -5,7 +5,7 @@
     <h1 class="custom_h1 p-2 h-55">News</h1>
         <div class="row row-cols-1 row-cols-md-4 g-4 h-55">
             <div class="col">
-                {% for news in news_db %}
+                {% for news in newsv %}
                 <a href="{% url 'news_detail' news.id %}">
                     <div class="card h-100">
                         <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="550" width="550" class="card-img-top" alt="jagermeister">

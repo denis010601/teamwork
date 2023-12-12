@@ -1,22 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="container">
-    <div class="row">
-        <div class="row col-12 col-xl-11 p-2">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for news in news_list %}
-                <div class="col-12 col-md-6 col-lg-4 mb-2 mb-md-3">
-                    <div class="card p-2" >
-                        <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">{{ news.title }}</h5>
-                        <p class="card-text">{{ news.text }}</p>
-                        <a href="{% url 'news_detail' news.id %}" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
+                <div class="col-md-3">
+               <div class="card mb-4 h-100 border-dark" style="max-width: 18rem;">
+                   <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="350" width="350" class="card-img-top custom_img" alt="foto">
+                   <div class="card-body custom_card-body">
+                        <h4 class="card-title custom_h4">{{ news.title }}</h4>
+                        <p class="card-text custom_p">{{ news.text }}</p>
+                   </div>
                 </div>
+            </div>
             {% endfor %}
         </div>
-        <div class="row col-12 col-xl-1 ">sidebar</div>
-    </div>
 </div>
 {% endblock content %}

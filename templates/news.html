@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-<div class="container vh-100">
+<div class="container">
     <h1 class="custom_h1 p-2">News</h1>
+
         <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for news in newsv %}
-            <div class="col-md-3">
+               <a class="col-md-3" href="{% url 'news_detail' news.id %}">
+            <div class="">
                <div class="card mb-4 h-100 border-dark" style="max-width: 18rem;">
-                   <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="350" width="350" class="card-img-top" alt="foto">
+                   <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="350" width="350" class="card-img-top custom_img" alt="foto">
                    <div class="card-body custom_card-body">
                         <h4 class="card-title custom_h4">{{ news.title }}</h4>
                         <p class="card-text custom_p">{{ news.text }}</p>
@@ -16,38 +18,39 @@
             </div>
             {% endfor %}
         </div>
+    </a>
 </div>
-<!--<div class="container vh-60">-->
-<!--    <div class="text-center h-100">-->
-<!--        <button type="button" class="btn btn-outline-success custom_button "><a class="align-items-center">Load More</a></button>-->
-<!--    </div>-->
-<!--</div>-->
-<!--    <div class="container vh-60">-->
-<!--        <div class="h-100">-->
-<!--            <div class="">-->
-<!--                <div class="row row-cols-2 row-cols-md-2 g-4">-->
-<!--                  <div class="col">-->
-<!--                    <div class="card h-100 custom_div-1">-->
-<!--                      <div class="card-body d-flex justify-content-between align-items-center">-->
-<!--                        <p class="card-text custom_p">Leave you data and your request and we will contact you with a solution!</p>-->
-<!--                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">-->
-<!--                              <button class="custom_button_exclusive btn btn-primary me-md-2" type="button">Send Request</button>-->
-<!--                          </div>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="col">-->
-<!--                    <div class="card h-100 custom_div-2">-->
-<!--                      <div class="card-body d-flex justify-content-between align-items-center">-->
-<!--                        <p class="card-text custom_p">Subscribe on our updates!</p>-->
-<!--                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">-->
-<!--                              <button class="custom_button_exclusive btn btn-primary me-md-2" type="button">Your Email</button>-->
-<!--                          </div>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+<div class="container">
+    <div class="text-center">
+        <button type="button" class="btn btn-outline-success custom_button "><a class="align-items-center">Load More</a></button>
+    </div>
+</div>
+    <div class="container">
+        <div class="">
+            <div class="">
+                <div class="row row-cols-2 row-cols-md-2 g-4">
+                  <div class="col">
+                    <div class="card h-100 custom_div-1">
+                      <div class="card-body d-flex justify-content-between align-items-center">
+                        <p class="card-text custom_p">Leave you data and your request and we will contact you with a solution!</p>
+                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                              <button class="custom_button_exclusive btn btn-primary me-md-2" type="button">Send Request</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 custom_div-2">
+                      <div class="card-body d-flex justify-content-between align-items-center">
+                        <p class="card-text custom_p">Subscribe on our updates!</p>
+                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                              <button class="custom_button_exclusive btn btn-primary me-md-2" type="button">Your Email</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

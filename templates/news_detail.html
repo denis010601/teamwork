@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="container vh-100">
-    <div class="row row-cols-1 row-cols-md-4 g-4 h-55">
-        <div class="col">
-                <div class="h-100">
-                  <div class="align-items-center justify-content-center">
-                        <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="550" width="550" class="img-thumbnail" alt="...">
-                  </div>
-                  <div class="align-items-center justify-content-center">
-                       <h5 class="">{{ news.title }}</h5>
-                        <p class="">{{ news.text }}</p>
-                  </div>
-
-
-                </div>
+<div class="container">
+    <div class="card text-bg-dark">
+    <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="500" width="100%" class="card-img border-dark" alt="...">
+        <div class="card-img-overlay">
+            <h4 class="custom_h4">{{ news.title }}</h4>
         </div>
     </div>
+    <div class="align-items-center justify-content-center">
+        <p class="custom_p">{{ news.text }}</p>
+    </div>
 </div>
+
+
+
+
+
 {% endblock content %}

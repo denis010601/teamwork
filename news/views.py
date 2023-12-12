@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView, TemplateView
 
 from news.models import News
@@ -8,7 +9,7 @@ class NewsView(ListView):
     fields = '__all__'
     template_name = 'news.html'
     context_object_name = 'newsv'
-    paginate_by = 4
+    # paginate_by = 4
 
 
 
