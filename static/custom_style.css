@@ -8,7 +8,6 @@
 }
 body {
     background: linear-gradient(217.36deg, #242627 1.99%, #161718 101.43%);
-
 }
 .custom_h1 {
     margin: 2% auto;
@@ -32,7 +31,7 @@ body {
     src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
 }
 .custom_p {
-    color:azure;
+    color:aliceblue;
     font-size: 20px;
     font-family: 'Gotham Pro';
     font-style: normal;
@@ -45,7 +44,7 @@ body {
     color: grey;
 }
 .custom_card-body {
-    background: linear-gradient(217.36deg, #242627 1.99%, #161718 101.43%);
+    background: black;
 }
 
 a {
@@ -62,6 +61,4 @@ button {
 }
 .custom_div-2 {
     background: linear-gradient(19.48deg, rgba(226, 243, 253, 0.24) -10.08%, rgba(147, 225, 237, 0.24) 16.82%, rgba(2, 185, 243, 0.24) 47.06%, rgba(2, 138, 190, 0.24) 78.53%, rgba(0, 92, 157, 0.24) 108.39%);
-
-
 }

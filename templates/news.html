@@ -2,11 +2,11 @@
 {% block content %}
 {% load static %}
 <div class="container vh-100">
-    <h1 class="custom_h1 p-2 h-0">News</h1>
-        <div class="row">
+    <h1 class="custom_h1 p-2">News</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for news in newsv %}
-            <div class="col-md-4">
-               <div class="card mb-4">
+            <div class="col-md-3">
+               <div class="card mb-4 h-100 border-dark" style="max-width: 18rem;">
                    <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="350" width="350" class="card-img-top" alt="foto">
                    <div class="card-body custom_card-body">
                         <h4 class="card-title custom_h4">{{ news.title }}</h4>
@@ -16,24 +16,6 @@
             </div>
             {% endfor %}
         </div>
-<!--            <div class="pagination">-->
-<!--                {% block paging %}-->
-<!--                    {% if is_paginated %}-->
-<!--                    <span class="step-links">-->
-<!--                        {% if page_obj.has_previous %}-->
-<!--                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>-->
-<!--                        {% endif %}-->
-<!--                        <span class="current-page">-->
-<!--                            Страница {{ page_obj.number }} из {{ paginator.num_pages }}.-->
-<!--                        </span>-->
-<!--                        {% if page_obj.has_next %}-->
-<!--                            <a href="?page={{ page_obj.next_page_number }}">next</a>-->
-<!--                        {% endif %}-->
-<!--                    </span>-->
-<!--                    {% endif %}-->
-<!--                {% endblock %}-->
-<!--            </div>-->
-
 </div>
 <!--<div class="container vh-60">-->
 <!--    <div class="text-center h-100">-->
