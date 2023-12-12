@@ -5,9 +5,15 @@
         {% for product in products_list %}
         <div class=" d-flex col-12 md-6 col-xl-4 col-xxl-3 mb-2 mb-md-3">
             <div class="card">
-                <div class="card-body align-items-center justify-content-center">
-                    <img class="card-img-top w-50" src="{{ product.image.url }}" alt="">
-                    <a href="{# url 'product_detail' product.pk #}" class="btn btn-primary">{{ product.title|truncatechars:50 }}</a>
+                <div class="card__top">
+                    <a href="" class="card__image">
+              <!-- вместо ./../static/img/image.png путь к статик в проекте  -->
+                        <img src="{{ product.image.url }}" alt="{{ product.title|truncatechars:50 }}">
+                    </a>
+                </div>
+                <div class="card__bottom">
+                    <img class="card__add-basket" src="">
+                    <h3 class="card__title"> {{ product.title|truncatechars:50 }} </h3>
                 </div>
             </div>
         </div>
