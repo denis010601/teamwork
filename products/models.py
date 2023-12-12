@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.db import models
 
+
 class Products(models.Model):
     title = models.CharField(max_length=100, verbose_name="Название", blank=True, null=True)
     image = models.ImageField(upload_to='image/', verbose_name="Фото продукта")
@@ -13,7 +14,7 @@ class Products(models.Model):
     barcode = models.PositiveIntegerField(verbose_name="Код продукта")
     pcs_truck = models.PositiveIntegerField(verbose_name="Штук в фуре")
     pallets_truck = models.PositiveIntegerField(verbose_name="Паллет в фуре")
-    cases_truck = models.PositiveIntegerField( verbose_name="Упаковок в фуре")
+    cases_truck = models.PositiveIntegerField(verbose_name="Упаковок в фуре")
     gross_weight = models.FloatField(verbose_name="Общая масса, кг")
     description = models.TextField(verbose_name="Описание", blank=True)
 

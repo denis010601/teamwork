@@ -17,12 +17,39 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', include('products.urls'))
+=======
+<<<<<<< HEAD
+from django.urls import path
+from news.views import NewsView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('news/', NewsView.as_view(), name='news'),
+>>>>>>> develop
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+<<<<<<< HEAD
+=======
+
+=======
+from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    # path('brands/', include('import_export.urls')),
+    path('products/', include('products.urls')),
+]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+>>>>>>> feature/task0003
+>>>>>>> develop
