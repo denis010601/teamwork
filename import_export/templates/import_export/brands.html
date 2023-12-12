@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="block-3  vh-100">
+    <div class="container d-flex align-items-center justify-content-center text-center vh-100">
+        <div class="col-12 col-md-8 col-lg-5 ps-0 ps-md-2 ps-lg-4">
+            <h2 class="h2">Brands we Work with</h2>
+            <div class="txt">We offer a wide range of popular products, including</div>
+            <div class="row">
+                {% for brand in brand_list %}
+                    <div class="col-2">
+                        <img class="w-100" src="{{ brand.image.url }}" alt="">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}
+
