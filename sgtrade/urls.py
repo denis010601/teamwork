@@ -27,7 +27,7 @@ urlpatterns = [
     path('news/', NewsView.as_view(), name='news'),
     # path('brands/', include('import_export.urls')),
     path('products/', include('products.urls')),
-    path('', include('personal_account.urls'))
+    path(' ', include('personal_account.urls'))
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
