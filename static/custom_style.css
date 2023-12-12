@@ -1,0 +1,115 @@
+.custom_button {
+    min-width: initial;
+    min-height: initial;
+}
+.custom_button_exclusive {
+    min-width: 30px;
+    min-height: 30px;
+}
+body {
+    background: linear-gradient(217.36deg, #242627 1.99%, #161718 101.43%);
+
+}
+.custom_h1 {
+    margin: 2% auto;
+    color:azure;
+    font-size: 54px;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf)
+}
+.custom_h4 {
+    color:azure;
+    font-size: 24px;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf)
+}
+.custom_a {
+    font-size: 16px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
+}
+.custom_p {
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf)  
+}
+[aria-current='page'] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: grey;
+}
+.custom_card-body {
+    background: linear-gradient(217.36deg, #242627 1.99%, #161718 101.43%);
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+button {
+    margin: 3% auto;
+}
+.custom_div-1 {
+    background: linear-gradient(261.91deg, #04C1C1 -1.66%, #9BE3E3 -1.65%, #04C1C1 64.99%);
+
+
+}
+.custom_div-2 {
+    background: linear-gradient(19.48deg, rgba(226, 243, 253, 0.24) -10.08%, rgba(147, 225, 237, 0.24) 16.82%, rgba(2, 185, 243, 0.24) 47.06%, rgba(2, 138, 190, 0.24) 78.53%, rgba(0, 92, 157, 0.24) 108.39%);
+
+
+}
+
+
+.card {
+  width: 305px;
+  min-height: 350px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Размещаем элементы в колонку */
+  justify-content: space-between;
+  border-radius: 4px;
+  transition: 0.2s;
+  position: relative;
+}
+.card__top {
+  flex: 0 0 220px;
+  position: relative;
+
+}
+.card__title {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card__image {
+  display: block;
+
+}
+
+.card__bottom {
+  background-color: #111010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+
+}
+.card__add-basket {
+
+  width: 13px;
+  height: 13px;
+  padding: 5px;
+  border: 1px solid #04c1c1;
+  margin-right: 30px;
+
+}
