@@ -4,4 +4,4 @@ from .models import *
 class NewsForm(forms.ModelForm):
     class Meta:
         model = News
-        fields = ['title', 'text']
+        fields = ['title', 'text', 'title_text', 'comment']

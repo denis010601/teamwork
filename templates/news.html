@@ -11,7 +11,7 @@
                    <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="350" width="350" class="card-img-top custom_img" alt="foto">
                    <div class="card-body custom_card-body">
                         <h4 class="card-title custom_h4">{{ news.title }}</h4>
-                        <p class="card-text custom_p">{{ news.text }}</p>
+                        <p class="card-text custom_p">{{ news.text|truncatechars:45 }}</p>
                    </div>
                </div>
             </div>
