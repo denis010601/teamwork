@@ -6,3 +6,5 @@ class ProductListView(ListView):
     model = Products
     # template_name = 'products/products_list.html'
 
+class ProductDetailView(DetailView):
+    model = Products
