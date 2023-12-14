@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.errors }}
+    <div class="">
+        {{ form.full_name.label_tag }}
+        {{ form.full_name }}
+    </div>
+    <div class="">
+        {{ form.birth_date.label_tag }}
+        {{ form.birth_date }}
+    </div>
+    <div class="">
+        {{ form.username.label_tag }}
+        {{ form.username }}
+    </div>
+    <div class="">
+        {{ form.password1.label_tag }}
+        {{ form.password1 }}
+    </div>
+    <div class="">
+        {{ form.password2.label_tag }}
+        {{ form.password2 }}
+    </div>
+
+    <div class="">
+        <button type="submit">Зарегистрироваться</button>
+    </div>
+</form>
+{% endblock content %}
