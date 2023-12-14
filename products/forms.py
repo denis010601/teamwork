@@ -14,7 +14,7 @@ class CreateProductForm(forms.Form):
         model = Products
         fields = 'title', 'description', 'image'
 
-    title = forms.CharField(label='Название',widget=forms.ClearableFileInput(attrs={'multiple': False}), validators=[validate_image], required=False)
+    title = forms.CharField(label='Название', widget=forms.ClearableFileInput(attrs={'multiple': False}), validators=[validate_image], required=False)
     description = forms.CharField(label='Описание')
     image = forms.ImageField(label='Фото продукта')
     create = forms.DateField(label='Время добавления', widget=forms.DateInput(attrs={'placeholder': 'DD-MM-YYYY'}))
