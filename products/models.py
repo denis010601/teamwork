@@ -1,10 +1,13 @@
 from django.contrib import admin
 from django.db import models
 
-
+class Category(models.Model):
+    title = models.CharField(max_length=100, verbose_name="Название", blank=True, null=True)
+    def __str__(self):
+        return f"{self.title}"
 class Products(models.Model):
     title = models.CharField(max_length=100, verbose_name="Название", blank=True, null=True)
-    category = models.CharField(max_length=250, verbose_name="Категория", blank=True, null=True)
+    category = models.OneToOneField(Category, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='image/', verbose_name="Фото продукта")
     volume = models.CharField(max_length=100, verbose_name="Объем", blank=True, null=True)
     packaging = models.CharField(max_length=100, verbose_name="Количество в упаковке", blank=True, null=True)
@@ -21,4 +24,7 @@ class Products(models.Model):
 
     def __str__(self):
         return f"{self.title}, {self.volume}"
+
+
+
 
