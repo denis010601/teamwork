@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="card text-bg-dark">
+    <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="500" width="100%" class="card-img border-dark" alt="...">
+        <div class="card-img-overlay">
+            <h4 class="custom_h4">{{ news.title }}</h4>
+            <p class="card-text"><small>{{ news.pub_date|date:"d.m.Y" }}</small></p>
+        </div>
+    </div>
+    <div class="">
+        <h4 class="custom_h4_1">{{ news.title_text }}</h4>
+        <p class="custom_p1">{{ news.text }}</p>
+        {% if news.image_text %}
+        <img src="{{ MEDIA_ROOT }}{{ news.image_text.url }}" class="rounded mx-auto d-block border-dark custom_img" alt="...">
+        {% endif %}
+        {% if news.comment %}
+        <p class="custom_p1">{{ news.comment }}</p>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}
