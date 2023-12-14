@@ -1,7 +1,7 @@
-from django.views.generic import DetailView, ListView, TemplateView
+from django.views.generic import DetailView, ListView
 
 from news.models import News
-from .forms import NewsForm
+
 
 class NewsView(ListView):
     model = News
@@ -18,6 +18,7 @@ class NewsView(ListView):
 class NewsListView(ListView):
     model = News
     template_name = 'news_list.html'
+
 class NewsDetailView(DetailView):
     model = News
     template_name = 'news_detail.html'
