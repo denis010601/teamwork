@@ -19,10 +19,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from news.views import NewsView
+from quote.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', NewsView.as_view(), name='news'),
+    path('quate/', index, name="index"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
