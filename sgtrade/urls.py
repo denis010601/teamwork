@@ -31,7 +31,7 @@ urlpatterns = [
     path('', include('products.urls')),
 >>>>>>> c1219f96c33c92fc429c6d63e987d700056e8ecc
     path('products/', include('products.urls')),
-    path('accounts/profile/', include('personal_account.urls')),
+    path('', include('personal_account.urls')),
     path('news/', NewsView.as_view(), name='news'),
 ]
 
