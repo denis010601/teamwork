@@ -1,6 +1,7 @@
 
 body {
     background: #242627;
+    width: 1537px;
     /* padding-top: 23px;
     padding-left: 128px;
     padding-right: 128px; */
@@ -24,14 +25,14 @@ section {
 .container_1 {
     padding-left: 128px;
     padding-right: 128px;
-    font-family: Gotham Pro;
+    font-family: 'Gotham Pro';
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 .container_2 {
-    font-family: Playfair Display;
+    font-family: 'Playfair Display';
     font-size: 54px;
     font-style: normal;
     font-weight: 700;
@@ -214,4 +215,36 @@ a {
 
 }
 
+.home_btn {
+    background: #63DEA6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 228px;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 66px;
+}
 
+.home_container {
+    margin-left: 147px;
+}
+
+.home_section {
+    height: 537px;
+    margin-top: 112px;
+    background-image: url(img/coca-cola-quien-propietario\ 1.png);
+    background-repeat: no-repeat;
+    background-position: 720px 50px;
+    background-size: 530px 490px;
+}
+
+.home_text2 {
+    color: #C8C8C8;
+    font-family: 'Radio Canada';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 145%;
+}

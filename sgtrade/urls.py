@@ -23,6 +23,7 @@ from news.views import NewsView
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
+    path('', include('home.urls')),
     path('', include('products.urls')),
     path('products/', include('products.urls')),
     path('', include('personal_account.urls')),
