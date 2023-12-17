@@ -6,6 +6,9 @@
     min-width: 30px;
     min-height: 30px;
 }
+.custom_form {
+    color:aliceblue;
+}
 body {
     background: linear-gradient(217.36deg, #242627 1.99%, #161718 101.43%);
 }
@@ -19,7 +22,7 @@ body {
 }
 .custom_h4 {
     color:azure;
-    font-size: 24px;
+    font-size: 26px;
     font-family: 'Playfair Display';
     font-style: italic;
     src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf);
@@ -29,7 +32,7 @@ body {
     justify-content: center;
     word-wrap: break-word;
     color:azure;
-    font-size: 24px;
+    font-size: 26px;
     font-family: 'Playfair Display';
     font-style: italic;
     src: local('static'), url(./font/Playfair_Display/PlayfairDisplay-BlackItalic.ttf);
@@ -48,18 +51,41 @@ body {
     src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);  
 }
 .custom_p1 {
-    margin-top: 55px;
-    margin-bottom: 55px;
+    margin-top: 3%;
+    margin-bottom: 15px;
+    margin-left: 4%;
     color:aliceblue;
     font-size: 20px;
     font-family: 'Gotham Pro';
     font-style: normal;
-    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);  
-    text-align: center;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);   
     justify-content: center;
     word-wrap: break-word;
 }
+.custom_p2 {
+    margin-top: 3%;
+    margin-left: 1%;
+    color:aliceblue;
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);   
+    justify-content: center;
+    word-wrap: break-word;
+}
+.custom_link {
+    color:aliceblue;
+    font-size: 20px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    src: local('static'), url(./font/Gotham_Pro/gothampro.ttf);   
+    justify-content: center;
+}
 .custom_img {
+    width: 100%;
+    height: 500;
+}
+.custom_img1 {
     width: 50%;
     height: 500;
 }
@@ -72,7 +98,6 @@ body {
 .custom_card-body {
     background: black;
 }
-
 a {
     text-decoration: none;
     color: azure;
@@ -82,8 +107,6 @@ button {
 }
 .custom_div-1 {
     background: linear-gradient(261.91deg, #04C1C1 -1.66%, #9BE3E3 -1.65%, #04C1C1 64.99%);
-
-
 }
 .custom_div-2 {
     background: linear-gradient(19.48deg, rgba(226, 243, 253, 0.24) -10.08%, rgba(147, 225, 237, 0.24) 16.82%, rgba(2, 185, 243, 0.24) 47.06%, rgba(2, 138, 190, 0.24) 78.53%, rgba(0, 92, 157, 0.24) 108.39%);

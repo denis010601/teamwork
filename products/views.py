@@ -1,25 +1,39 @@
 from django.shortcuts import render
-from django.views.generic import DetailView, ListView
+from django.views.generic import DetailView, ListView, CreateView, DeleteView
+from products.forms import ProductForm
+from products.models import Product
+from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
-from products.models import Products
 
 
-class NewsView(ListView):
-    model = Products
-    fields = '__all__'
-    template_name = 'product.html'
+class ProductListView(ListView):
+    model = Product
+    template_name = 'product_list.html'
     context_object_name = 'products'
 
-    def get_queryset(self):
-        return Products.objects.all()
-
-class NewsListView(ListView):
-    model = Products
-    template_name = 'product_list.html'
-
-class NewsDetailView(DetailView):
-    model = Products
+class ProductDetailView(DetailView):
+    model = Product
     template_name = 'product_detail.html'
+    context_object_name = 'product'
 
     def get_queryset(self):
-        return Products.objects.all()
+        return Product.objects.all()
+
+@method_decorator(login_required, name='dispatch')
+class ProductCreateView(CreateView):
+    model = Product
+    form_class = ProductForm
+    template_name = 'product_create.html'
+    success_url = reverse_lazy('product_list')
+
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)
+
+@method_decorator(login_required, name='dispatch')
+class ProductDeleteView(DeleteView):
+    model = Product
+    template_name = 'product_confirm_delete.html'
+    success_url = reverse_lazy('product_list')

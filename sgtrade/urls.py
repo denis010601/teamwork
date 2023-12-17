@@ -19,13 +19,17 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from news.views import NewsView, NewsDetailView, NewsListView
+from products.views import ProductCreateView, ProductListView, ProductDetailView, ProductDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', NewsView.as_view(), name='news'),
     path('news_list/', NewsListView.as_view(), name='news_list'),
     path('news/<int:pk>', NewsDetailView.as_view(), name='news_detail'),
-    path('create_product', )
+    path('products/', ProductListView.as_view(), name='product_list'),
+    path('products/<int:pk>', ProductDetailView.as_view(), name='product_detail'),
+    path('products/create/', ProductCreateView.as_view(), name='product_create'),
+    path('products/<int:pk>/delete', ProductDeleteView.as_view(), name='product_delete'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

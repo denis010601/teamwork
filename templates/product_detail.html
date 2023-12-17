@@ -1,11 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{ article.title }}</h1>
-<p>{{ article.text}}</p>
-{% for product in article_books %}
-<p>{{ book.title }}</p>
-<p>{{ book.description }}</p>
-{% endfor %}
-<a href="{% url 'update_article' article.pk %}">Редактировать</a>
-<a href="{% url 'delete_article' article.pk %}">Удалить</a>
+<div class="container">
+    <div class="card text-bg-dark">
+    <img src="{{ MEDIA_ROOT }}{{ product.image.url }}" height="500" width="100%" class="card-img border-dark custom_img" alt="...">
+        <div class="card-img-overlay">
+            <h4 class="custom_h4">{{ product.title }}</h4>
+            <p class="custom_p">{{ product.date_add|date:"d.m.Y" }}</p>
+        </div>
+    </div>
+    <div class="">
+
+            {% if product.volume %}<p class="custom_p2">Объем: {{ product.volume }}</p>{% endif %}
+            {% if product.packaging %}<p class="custom_p2">Количество в упаковке: {{ product.packaging }}</p>{% endif %}
+            {% if product.netto %}<p class="custom_p2">Масса нетто: {{ product.netto }}</p>{% endif %}
+            {% if product.brutto %}<p class="custom_p2">Масса брутто: {{ product.brutto }}</p>{% endif %}
+            {% if product.delivery %}<p class="custom_p2">Время доставки: {{ product.delivery|date:"d.m.Y" }}</p>{% endif %}
+            {% if product.minimal_order %}<p class="custom_p2">Минимальная партия: {{ product.minimal_order }}</p>{% endif %}
+            <p class="custom_p2">Код продукта: {{ product.barcode }}</p>
+            <p class="custom_p2">Штук в фуре: {{ product.pcs_truck }}</p>
+            <p class="custom_p2">Паллет в фуре: {{ product.pallets_truck }}</p>
+            <p class="custom_p2">Упаковок в фуре: {{ product.cases_truck }}</p>
+            <p class="custom_p2">Общая масса, кг: {{ product.gross_weight }}</p>
+            {% if product.description %}<p class="custom_p2">Описание: {{ product.description }}</p>{% endif %}
+    </div>
+</div>
+
 {% endblock content %}
