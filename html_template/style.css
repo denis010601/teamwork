@@ -1,0 +1,48 @@
+
+
+
+.centr_quote {
+    width: 800px;
+    height: 850px;
+    background-color: black;
+    text-align: center;
+    margin: 200px, 300px;
+
+}
+
+
+
+
+
+
+.body_quote {
+    
+    width: 477.42px;
+    height: 744.6px;
+    top: 190px;
+    left: -707px;
+    padding: 44px, 45px, 44px, 45px;
+    gap: 40px;
+
+}
+
+.text_get_to_quote {
+    width: 387.42px;
+    height: 65.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+
+    font-size: 54;
+    font-weight: 500;
+    line-height: 58px;
+    letter-spacing: 0em;
+
+}
+
+
+
+
+
