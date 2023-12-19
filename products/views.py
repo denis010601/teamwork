@@ -42,3 +42,5 @@ class ProductListView(ListView):
         return render(request, template_name=self.template_name,
                       context={'products_list': products_list, 'msg': msg, 'categories': categories})
 
+class ProductDetailView(DetailView):
+    model = Products
