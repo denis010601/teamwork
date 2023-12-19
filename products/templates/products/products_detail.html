@@ -93,6 +93,34 @@
             <div class="text-light mt-4">
                 {{ products.description }}
             </div>
+            <div>
+                {% if average_rating %}
+                    <p>Рейтинг: {{ average_rating }}</p>
+                {% endif %}
+                <h2>Отзывы</h2>
+                    {% for review in reviews %}
+                        <div class="review">
+                            <p>{{ review.user.username }} , {{ review.date_added }}</p>
+                            <p>{{ review.text }}</p>
+                        </div>
+                    {% empty %}
+                        <p>Нет отзывов...</p>
+                    {% endfor %}
+
+                <h2>Добавить отзыв</h2>
+                <form method="post" action="{% url 'add_review' product.pk %}">
+                    {% csrf_token %}
+                    {{ review_form.as_p }}
+                    <button type="submit">Добавить</button>
+                </form>
+
+                <h2>Добавить рейтинг</h2>
+                <form method="post" action="{% url 'add_rating' product.pk %}">
+                    {% csrf_token %}
+                    {{ rating_form.as_p }}
+                    <button type="submit">Добавить</button>
+                </form>
+            </div>
         </div>
     </section>
     <section class="mt-5">

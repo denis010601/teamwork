@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.db import models
+from personal_account.models import CastomUser
 
 
 class Products(models.Model):
@@ -21,3 +22,13 @@ class Products(models.Model):
     def __str__(self):
         return f"{self.title}, {self.volume}"
 
+class Review(models.Model):
+    product = models.ForeignKey(Products, on_delete=models.CASCADE, related_name='reviews')
+    user = models.ForeignKey(CastomUser, on_delete=models.CASCADE)
+    text = models.TextField()
+    date_added = models.DateField(auto_now_add=True)
+
+class Rating(models.Model):
+    product = models.ForeignKey(Products, on_delete=models.CASCADE, related_name='ratings')
+    user = models.ForeignKey(CastomUser, on_delete=models.CASCADE)
+    value = models.IntegerField()
