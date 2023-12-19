@@ -12,7 +12,7 @@ class Product(models.Model):
     barcode = models.PositiveIntegerField(verbose_name="Код продукта")
     pcs_truck = models.PositiveIntegerField(verbose_name="Штук в фуре")
     pallets_truck = models.PositiveIntegerField(verbose_name="Паллет в фуре")
-    cases_truck = models.PositiveIntegerField( verbose_name="Упаковок в фуре")
+    cases_truck = models.PositiveIntegerField(verbose_name="Упаковок в фуре")
     gross_weight = models.FloatField(verbose_name="Общая масса, кг")
     description = models.TextField(verbose_name="Описание", blank=True)
     date_add = models.DateTimeField(verbose_name="Время добавления")

@@ -12,8 +12,8 @@
                         <h4 class="card-title custom_h4">{{ product.title }}</h4>
                         <p class="card-text custom_p">{{ product.date_add|date:"d.m.Y" }}</p>
                        {% if user.is_staff %}
-                       {% endif %}
                         <a class="d-flex justify-content-center custom_link" href="{% url 'product_delete' product.pk %}">Delete</a>
+                       {% endif %}
                    </div>
                </div>
             </div>
@@ -21,7 +21,9 @@
         <p>No products available.</p>
         {% endfor %}
     </div>
+    {% if user.is_staff %}
     <a href="{% url 'product_create' %}">Create a new product</a>
+    {% endif %}
 </div>
 
 {% endblock content %}
