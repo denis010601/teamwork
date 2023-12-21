@@ -19,7 +19,8 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
-from news.views import NewsView
+
+
 
 urlpatterns = [
 <<<<<<< HEAD
@@ -28,11 +29,14 @@ urlpatterns = [
     path('brands/', include('import_export.urls')),
 =======
     path('admin/', admin.site.urls, name='admin'),
+<<<<<<< HEAD
     path('', include('products.urls')),
 >>>>>>> c1219f96c33c92fc429c6d63e987d700056e8ecc
+=======
+    path('', include('home.urls')),
+>>>>>>> 6814f243ba46c80902054d781a23c38394fe4af6
     path('products/', include('products.urls')),
-    path('', include('personal_account.urls')),
-    path('news/', NewsView.as_view(), name='news'),
+    path('news/', include('news.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
