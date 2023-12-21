@@ -16,51 +16,26 @@
         </div>
 
 
-{#        <div class="dropdown">#}
-{#            <form id="cat_form" class="dropdown" action="{% url 'products' %} " method="GET" data-bs-toggle="dropdown"#}
-                  aria-expanded="false">
-
-                {# csrf_token #}
-
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        Выбрать категорию
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'products' %}">Любая категория</a></li>
-                        {% for category in categories %}
-                            <li><a class="dropdown-item"  href="{% url 'products' %}?category={{ category.pk }}">{{ category }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-
-{#                <select id="cat_select" name="category" class="btn btn-secondary dropdown-toggle">Выбрать категорию#}
-{#                    <div class="dropdown-menu">#}
-{#                        <option class="dropdown-item" selected value="-1">Выбрать категорию</option>#}
-{#                        <option class="dropdown-item" value="0">Нет</option>#}
-{#                        {% for category in categories %}#}
-{#                            <option class="dropdown-item" value="{{ category.pk }}">{{ category }}</option>#}
-{#                        {% endfor %}#}
-{#                    </div>#}
-{#                </select>#}
-
-
-                {#            <button class="button" type="submit">Отправить</button>#}
-{#            </form>#}
-{#        </div>#}
-        <div>{{ msg }}</div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                Выбрать категорию
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{% url 'products' %}">Любая категория</a></li>
+                {% for category in categories %}
+                    <li><a class="dropdown-item"
+                           href="{% url 'products' %}?category={{ category.pk }}">{{ category }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
 
 
     </div>
     <div><a href="{# url '' #}" class="btn btn-primary">load more</a></div>
 
     <script>
-        document.getElementById('cat_select').addEventListener('change', function () {
-            document.getElementById('cat_form').submit();
-        });
+        {#document.getElementById('cat_select').addEventListener('change', function () {document.getElementById('cat_form').submit();});#}
     </script>
 
 {% endblock content %}

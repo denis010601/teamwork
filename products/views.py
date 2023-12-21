@@ -1,3 +1,4 @@
+from django.db.models import Count
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView, TemplateView, ListView
@@ -10,32 +11,10 @@ class ProductListView(ListView):
 
     def get(self, request, *args, **kwargs):
         category_str = request.GET.get('category')
-        if category_str:
-            category_id = int(category_str)
-        else:
-            category_id = 0
-
-        categories = Category.objects.all()
-        exists_categories = []
-        for category in categories:
-            products_list = Products.objects.filter(category=category.id)
-            if products_list:
-                exists_categories.append(category)
-
-        if category_id > 0:
-            products_list = Products.objects.filter(category=category_id)
-            msg = f"Это фильтр категория {category_id}"
-
-        else:
-            products_list = Products.objects.all()
-            msg = f"Это просто страница {category_id}"
-
-
-        print(categories[0])
-
-        # context = self.get_context_data()
-        return render(request, template_namdde=self.template_name,
-                      context={'products_list': products_list, 'msg': msg, 'categories': exists_categories})
+        category_id = int(category_str) if category_str else 0
+        categories = Category.objects.annotate(count=Count('products')).filter(count__gt=0)
+        products_list = Products.objects.filter(category=category_id) if category_id else Products.objects.all()
+        return render(request, template_name=self.template_name, context={'products_list': products_list,'categories': categories})
 
 class ProductDetailView(DetailView):
     model = Products
