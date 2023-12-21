@@ -1,48 +1,81 @@
-
-
-
 .centr_quote {
-    width: 800px;
-    height: 850px;
-    background-color: black;
-    text-align: center;
-    margin: 200px, 300px;
-
-}
-
-
-
-
-
-
-.body_quote {
-    
     width: 477.42px;
     height: 744.6px;
     top: 190px;
-    left: -707px;
-    padding: 44px, 45px, 44px, 45px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 44px, 45px, 0px, 45px;
     gap: 40px;
+    background-color: black;
+    
+}
+.body_quote {
+    text-align: center;
 
+}
+.color_quote {
+    color: #04C1C1
+}
+
+.texth1 {
+    padding: 10px 45px 0px 45px;
+    font: Playfair Display;
+    font-weight: 500;
+    size: 54px;
+    line-height: 58.16px;
+    text-align: center;
 }
 
 .text_get_to_quote {
-    width: 387.42px;
+
     height: 65.6px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+
     color:white;
 
-    font-size: 54;
+    font-size: 54px;
     font-weight: 500;
     line-height: 58px;
     letter-spacing: 0em;
 
 }
 
+.texttext {
+    color: #C8C8C8;
+    align-items: center;
+    padding: 0px 50.59px 0px 50.59px;
+    font-family: Radio Canada;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0em;
+   
+}
+
+.form_quote {
+    width: 387.42px;
+    height: 447px;
+    gap: 20px;
+    padding-left: 45px;
+    padding-right: 45px;
+
+}
+
+.input_quote {
+    background-color: black;
+    width: 100%;
+
+}
+
+.textarea_quote {
+    background-color: black;
+    width: 100%;
 
 
+}
 
+.button_quote {
+    background-color: #63DEA6;
 
+}
