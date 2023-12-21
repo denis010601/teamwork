@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'personal_account',
     'products',
     'news',
+    'about',
 
 ]
 
