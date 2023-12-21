@@ -1,23 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        {% for book in book_list %}
-        <div class="col-12 md-6 col-xl-4 col-xxl-3 mb-2 mb-md-3">
-            <div class="card"  style= "height: 500px;">
-                <div class="card-body align-items-center justify-content-center">
-                    <h5 class="card-title" style= "height: 15%;">{{ book.title|truncatechars:50 }}</h5>
-                    <img class="card-img-top w-50" src="https://cs4.pikabu.ru/post_img/big/2015/10/09/6/1444379881_1880025276.jpg" alt="">
-                    <p class="card-text" style="height:40%;">{{ book.description|truncatechars:150 }}</p>
-<!--                    <p class="card-text">{{ book.article }}</p>-->
-                    <a href="{% url 'book_detail' book.pk %}" class="btn btn-primary">Подробнее</a>
+  <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for news in news_list %}
+                <div class="col-md-3">
+               <div class="card mb-4 h-100 border-dark" style="max-width: 18rem;">
+                   <img src="{{ MEDIA_ROOT }}{{ news.image.url }}" height="350" width="350" class="card-img-top custom_img" alt="foto">
+                   <div class="card-body custom_card-body">
+                        <h4 class="card-title custom_h4">{{ news.title }}</h4>
+                        <p class="card-text custom_p">{{ news.text }}</p>
+                   </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-        <div><a href="{% url 'create_book' %}">Добавить книгу</a></div>
-    </div>
 </div>
-
-
 {% endblock content %}
