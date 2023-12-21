@@ -7,7 +7,7 @@ class Category(models.Model):
         return f"{self.title}"
 class Products(models.Model):
     title = models.CharField(max_length=100, verbose_name="Название", blank=True, null=True)
-    category = models.OneToOneField(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='image/', verbose_name="Фото продукта")
     volume = models.CharField(max_length=100, verbose_name="Объем", blank=True, null=True)
     packaging = models.CharField(max_length=100, verbose_name="Количество в упаковке", blank=True, null=True)

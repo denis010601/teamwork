@@ -1,20 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        <div class="row">
-            {% for product in products_list %}
-                <div class=" d-flex col-12 md-6 col-xl-4 col-xxl-3 mb-2 mb-md-3">
-                    <div class="card">
-                        <div class="card-body align-items-center justify-content-center">
-                            <img class="card-img-top w-50" src="{{ product.image.url }}" alt="">
-                            <a href="{# url 'product_detail' product.pk #}"
-                               class="btn btn-primary">{{ product.title|truncatechars:50 }}</a>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-
 
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -28,6 +14,30 @@
                            href="{% url 'products' %}?category={{ category.pk }}">{{ category }}</a></li>
                 {% endfor %}
             </ul>
+        </div>
+
+
+        <div class="row">
+            {% for product in products_list %}
+                <div class=" d-flex col-4 md-6 col-xl-4 col-xxl-3 mb-2 mb-md-3">
+
+                    <div class="col-12 card-body align-items-center justify-content-center">
+                        <img style="object-fit:cover; width:100%; height:300px;" class="card-img-top" src="{{ product.image.url }}" alt="">
+
+                        <a href="{# url 'product_detail' product.pk #}"
+                           class="col-12 btn btn-primary">{{ product.title|truncatechars:50 }}</a>
+
+
+                        {#                            <input type="checkbox" id="ch1">#}
+                        {#                            <div>#}
+                        {#                                <label for="ch1">{{ product.title|truncatechars:50 }}</label>#}
+                        {#                            </div>#}
+
+
+                    </div>
+
+                </div>
+            {% endfor %}
         </div>
 
 
