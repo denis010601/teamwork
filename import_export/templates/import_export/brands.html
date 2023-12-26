@@ -1,21 +1,39 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<section class="block-3  vh-100">
-    <div class="container d-flex align-items-center justify-content-center text-center vh-100">
-        <div class="col-12 col-md-8 col-lg-5 ps-0 ps-md-2 ps-lg-4">
-            <h2 class="h2">Brands we Work with</h2>
-            <div class="txt">We offer a wide range of popular products, including</div>
-            <div class="row">
-                {% for brand in brand_list %}
-                    <div class="col-2">
-                        <img class="w-100" src="{{ brand.image.url }}" alt="">
-                    </div>
-                {% endfor %}
+    <section class="hero container d-flex" style="position: relative;">
+        <img class="w-100 h-auto img-fluid bg-overlay opacity-25" src="{% static 'img/truck.png' %}" alt="">
+
+        <h1 class="text-light" style="position: absolute;top: 40%;left: 5%;width:375px;">
+            Import/Export
+        </h1>
+        <div style="position: absolute;top: 55%;left: 5%;height: 4px;width: 100px;background-color: #007b7b;"></div>
+        <div class="text-light" style="position: absolute;top: 60%;left: 5%;width:375px;">
+            At our company, we are dedicated to providing customers with a unique value proposition: well-known and
+            reputable products at prices lower than those offered by manufacturers or their representatives. Our primary
+            service revolves around the sale of established brands within the FMCG category.
+        </div>
+    </section>
+
+
+
+
+    <section class="block-3  vh-100">
+        <div class="container d-flex align-items-center justify-content-center text-center vh-100">
+            <div class="col-12 col-md-8 col-lg-5 ps-0 ps-md-2 ps-lg-4">
+                <h2 class="text-light">Brands we Work with</h2>
+                <div class="text-light">We offer a wide range of popular products, including</div>
+                <div class="row">
+                    {% for brand in brand_list %}
+                        <div class="col-2">
+                            <img class="w-100" src="{{ brand.image.url }}" alt="">
+
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 {% endblock content %}
