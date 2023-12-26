@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
     path('', include('products.urls')),
     path('products/', include('products.urls')),
-    path('', include('personal_account.urls')),
+    path('accounts/', include('personal_account.urls')),
     path('news/', NewsView.as_view(), name='news'),
 ]
 
