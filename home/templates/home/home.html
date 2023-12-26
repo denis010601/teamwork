@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="home_section">
+    <div class="home_container col-5">
+        <h1 class="home_text text-light">Your Trusted Source for Exceptional</h1>
+        <h1 class="home_text"><span style="color:#04C1C1">Beverage Imports</span></h1>
+        <p class="home_text2 mt-4">Discover a World of Premium Beverages, Directly from Renowned Producers</p>
+        <button class="home_btn">
+            <img src="{% static 'img\layout-grid1.png' %}" alt="">
+            <p class="mt-3 mx-2">Explore Beverages</p>
+        </button>
+    </div>
+</section>
+<section class="my-5">
+    <div class="text-light d-flex">
+        <h2 class="col-3">Products</h2>
+        <p class="col-9">Explore our handpicked selection of top-quality products sourced directly from leading producers, 
+        offering you a diverse range of flavors to cater to your business needs.</p>
+    </div>
+    <div class="row d-flex text-light">
+        <div class="col-4 pt-5">
+            <img src="{% static 'img\Frame 9.png' %}" alt="">
+            <div class="d-flex mt-2 mx-4">
+                <img src="{% static 'img\Frame 14.png' %}" alt="" width="25px" height="25px">
+                <p class="mx-3">Browse</p>
+            </div>
+        </div>
+        <div class="col-4 pt-5">
+            <img src="{% static 'img\Frame 10.png' %}" alt="">
+            <div class="d-flex mt-3 mx-4">
+                <img src="{% static 'img\Frame 14.png' %}" alt="" width="25px" height="25px">
+                <p class="mx-3">Browse</p>
+            </div>
+        </div>
+        <div class="col-4 pt-5">
+            <img src="{% static 'img\Frame 11.png' %}" alt="">
+            <div class="d-flex mt-3 mx-4">
+                <img src="{% static 'img\Frame 14.png' %}" alt="" width="25px" height="25px">
+                <p class="mx-3">Browse</p>
+            </div>
+        </div>
+        <div class="col-4 pt-5">
+            <img src="{% static 'img\Frame 9 (1).png' %}" alt="">
+            <div class="d-flex mt-3 mx-4">
+                <img src="{% static 'img\Frame 14.png' %}" alt="" width="25px" height="25px">
+                <p class="mx-3">Browse</p>
+            </div>
+        </div>
+        <div class="col-4 pt-5">
+            <img src="{% static 'img\Frame 10 (1).png' %}" alt="">
+            <div class="d-flex mt-2 mx-4">
+                <img src="{% static 'img\Frame 14.png' %}" alt="" width="25px" height="25px">
+                <p class="mx-3">Browse</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
