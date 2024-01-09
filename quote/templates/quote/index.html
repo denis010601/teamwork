@@ -1,7 +1,28 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 
 {% block content %}
-
+<div class="body_quote">
+    <div class="text_quote_h1">
+      <p class="text_Get_the_quote">
+        Get the<span class="color_quote">&nbspquote!</span>
+      </p>
+    </div>
+    <div class="text_text_">
+      <p class="text_Fill_the_contact">
+        Fill the contact form and send it to us, we will contact you soon
+      </p>
+    </div>
+    <form action="" class="form_quote">
+      <input type="Email" placeholder="Email" class="input_quote">
+      <input type="Phone number" placeholder="Phone number" class="input_quote">
+      <input type="Company" placeholder="Company" class="input_quote">
+      <textarea name="Specify your request" id="" cols="21" class="textarea_quote" rows="10" placeholder="Specify your request">
+      </textarea>
+      <div class="div_button_green">
+        <button type="submit" class="button_quote_send"><img src="{% static 'img/send.png' %}" width="22" height="22" alt="x"> Send!</button>
+      </div>
+    </form>
+  </div>
 {% endblock %}

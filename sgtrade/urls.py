@@ -28,7 +28,7 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('', include('personal_account.urls')),
     path('news/', NewsView.as_view(), name='news'),
-    path('quate/', index, name="index"),
+    path('quote/', index, name="index"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
